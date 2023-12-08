@@ -1,5 +1,12 @@
 # CursusApp
 
+# Run with Docker:
+build the image:
+    docker build -t cursus-app:dev .
+
+Run the image:
+    docker run -p 4200:4200 --name cursus-app-container4 cursus-app:dev
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server
