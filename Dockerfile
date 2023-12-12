@@ -4,8 +4,6 @@ FROM node:20.10.0
 # Set the working directory inside the container
 WORKDIR /app
 
-RUN npm install -g @angular/cli@13
-
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
@@ -14,6 +12,7 @@ COPY . .
 
 # Install npm dependencies
 RUN npm install
+RUN npm install -g @angular/cli@13
 
 # i cant use the node_modules from windows so i need to run this
 RUN npm ci
